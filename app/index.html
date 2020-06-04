@@ -24,47 +24,67 @@
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+
 	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
 
 <body>
 
-	<header class="page-header">
+	<header class="custom-container page-header">
 		<div class="page-header__logo">
-<!--			<img src="img/l" alt="">-->
+			<img src="img/logo-home.png" alt="" width="47" height="12">
 		</div>
-		<button class="btn page-header__sidebar">Open sidebar</button>
+
+		<button class="js-open-sidebar btn btn_sidebar page-header__sidebar">
+			<img src="img/icon-menu.png" alt="" width="23" height="21">
+			Open sidebar
+		</button>
 	</header>
 
-	<div class="sidebar">
-		<button class="sidebar__empty-space">Close sidebar</button>
+	<div class="js-sidebar sidebar">
+		<button class="js-close-sidebar sidebar__empty-space">Close sidebar</button>
 		<div class="sidebar__container">
-			<button class="sidebar__exit">Close sidebar</button>
-			<nav class="sidebar__menu">
-				<a href="">About</a>
-				<a href="">Testimonials</a>
-				<a href="">Pricing</a>
-				<a href="">Contact</a>
-			</nav>
+			<button class="js-close-sidebar sidebar__exit">
+				Close sidebar
+				<img src="img/icon-cross.png" alt="" width="28" height="28">
+			</button>
+			<ul class="sidebar__menu">
+				<li class="sidebar__menu-item"><a href="">About</a></li>
+				<li class="sidebar__menu-item"><a href="">Testimonials</a></li>
+				<li class="sidebar__menu-item"><a href="">Pricing</a></li>
+				<li class="sidebar__menu-item"><a href="">Contact</a></li>
+			</ul>
 			<button class="sidebar__buy">Order now</button>
 		</div>
 	</div>
 
-	<main>
-		<h2 class="custom-h2">Deleniti explicari democritum nam</h2>
-		<p class="custom-p">no, no debitis praullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+	<main class="custom-container page-main">
+		<h1 class="visually-hidden">Buy time app</h1>
+		<section class="date-overview">
+			<h2 class="custom-h2">Deleniti explicari democritum</h2>
+			<p class="custom-p">no, no debitis praullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
+		</section>
 
 		<div data-key="2011" class="js-date date-card">
-			<h2 class="js-date-title date-card__title">Deleniti explicari democritum nam no, no debitis praullamco laboris</h2>
-			<div class="js-date-output date-card__date">2011</div>
+			<h2 class="js-date-title custom-h2 date-card__title">Deleniti explicari democritum nam no, no debitis praullamco laboris</h2>
+			<div class="js-date-output js-date-output-load date-card__date">2011</div>
 			<p class="js-date-descr date-card__descr">Te nam semper partiendo. Diam abhorreant ex vis, usu cu suas solum quodsi.</p>
 		</div>
 
 		<ul class="date-circle">
-			<li data-key="2020" class="js-date-key date-circle__list">today</li>
-			<li data-key="2017" class="js-date-key date-circle__list">2019</li>
-			<li data-key="2015" class="js-date-key date-circle__list">2018</li>
+<!--			todo вручную задать стили которые будут немного наклонять и смещать соседние элементы списка-->
+<!--			todo написать скрипт который будет делать то же самое-->
+			<li data-key="2020" class="js-date-key date-circle__item date-circle__item_prev_4">today</li>
+			<li data-key="2017" class="js-date-key date-circle__item date-circle__item_prev_3">2017</li>
+			<li data-key="2015" class="js-date-key date-circle__item date-circle__item_prev_2">2015</li>
+			<li data-key="2012" class="js-date-key date-circle__item date-circle__item_prev">2012</li>
+			<li data-key="2011" class="js-date-key date-circle__item date-circle__item_current">2011</li>
+			<li data-key="2007" class="js-date-key date-circle__item date-circle__item_next">2007</li>
+			<li data-key="2006" class="js-date-key date-circle__item date-circle__item_next_2">2006</li>
+			<li data-key="2004" class="js-date-key date-circle__item date-circle__item_next_3">2004</li>
 		</ul>
 	</main>
 

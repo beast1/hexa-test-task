@@ -37,8 +37,36 @@ const dateDescr = document.querySelector('.js-date-descr');
 
 function outputDate(date) {
     console.log(datesJSON[date]);
-    dateTitle.textContent = datesJSON[date].title;
-    dateOutput.textContent = datesJSON[date].output;
-    dateDescr.textContent = datesJSON[date].descr;
+
+    dateOutput.classList.add('js-date-output-load');
+
+    // запустить после конца транзишина лоадера
+    setTimeout(() => {
+        dateTitle.textContent = datesJSON[date].title;
+        dateOutput.textContent = datesJSON[date].output;
+        dateDescr.textContent = datesJSON[date].descr;
+        dateOutput.classList.remove('js-date-output-load');
+    }, 1000);
 }
-// });
+
+const sidebar = document.querySelector('.js-sidebar');
+const openSidebarBtnArr = document.querySelectorAll('.js-open-sidebar');
+const closeSidebarBtnArr = document.querySelectorAll('.js-close-sidebar');
+
+openSidebarBtnArr.forEach((openSidebarBtn) => {
+    openSidebarBtn.addEventListener('click', () => {
+        sidebar.classList.add('js-open');
+    });
+});
+
+closeSidebarBtnArr.forEach((closeSidebarBtn) => {
+    closeSidebarBtn.addEventListener('click', () => {
+        sidebar.classList.remove('js-open');
+    });
+});
+
+document.onkeydown = function(e) {
+    if (e.keyCode === 27) {
+        sidebar.classList.remove('js-open');
+    }
+};
