@@ -1,0 +1,182 @@
+.date-widget
+  @media (min-width: 768px)
+    position: relative
+
+  &__card
+    color: #ffd7f1
+
+    @media (max-width: 767px)
+      padding-left: 67px
+      padding-right: 67px
+
+    @media (min-width: 768px)
+      max-width: 275px
+      width: 100%
+      margin: 0 auto
+      margin-bottom: 411px
+
+    @media (min-width: 1366px)
+      max-width: 750px
+      padding-left: 200px
+      margin-bottom: 295px
+
+  &__title
+    margin-bottom: 74px
+
+    font-size: 20px
+    line-height: 1.28
+    font-weight: 600
+
+    @media (min-width: 768px)
+      margin-bottom: 122px
+
+      font-size: 26px
+
+    @media (min-width: 1366px)
+      max-width: 345px
+
+  &__date-wrap
+    position: relative
+
+    margin-bottom: 14px
+
+    @media (min-width: 768px)
+      margin-bottom: 36px
+
+  &__date
+    font-family: 'Poppins', sans-serif
+    font-size: 56px
+    line-height: 1
+    font-weight: 700
+    letter-spacing: 5.6px
+
+    background: linear-gradient(to top, #c02ac6, #fa2caf), linear-gradient(to bottom, #632efa, #632efa)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+    @media (min-width: 768px) and (max-width: 1366px)
+      font-size: 120px
+
+    @media (min-width: 1366px)
+      font-size: 198px
+      letter-spacing: 19.8px
+
+
+  &__loader
+    content: ''
+
+    position: absolute
+    left: -4px
+    bottom: 10px
+
+    display: block
+    width: 35px
+    height: 7px
+    background-image: linear-gradient(to right, #ffafe3, #fa2cb0)
+    //opacity: 0
+    transform: translate(-100%)
+    transition: opacity 1s ease
+
+    @media (min-width: 768px) and (max-width: 1366px)
+      left: -10px
+      bottom: 20px
+
+      width: 60px
+      height: 11px
+
+    @media (min-width: 1366px)
+      left: -25px
+      bottom: 30px
+
+      width: 166px
+      height: 13px
+
+  &__descr
+    margin: 0
+    font-size: 11px
+    line-height: 16px
+
+    @media (min-width: 768px)
+      font-size: 12px
+      line-height: 22px
+
+    @media (min-width: 1366px)
+      max-width: 345px
+
+  &__circle
+    position: relative
+
+    //t
+    display: flex
+    flex-direction: column
+    justify-content: center
+    //align-items: center
+    //height: 200px
+
+    margin: 0
+    padding: 0
+
+    font-family: 'Poppins', sans-serif
+
+    color: #d5d5d5
+    font-size: 12px
+
+    list-style: none
+
+    @media (max-width: 767px)
+      transform: rotate(-90deg)
+
+    @media (min-width: 768px)
+      position: absolute
+      top: 0
+
+    //background: red
+
+    &::before
+      content: ''
+
+      position: absolute
+      left: calc(-429px - 15px)
+      //top: -50px
+
+      display: block
+      width: 429px
+      height: 875px
+      border-right: 2px solid #d5d5d5
+
+      border-radius: 50%
+
+  &__key
+    padding-top: 20px
+    padding-bottom: 20px
+
+    line-height: 1
+    font-weight: 700
+    cursor: pointer
+
+    &:hover,
+    &_current
+      color: #ffbfe8
+
+    &_prev
+      //transform: translateX(-8px) rotate(-12deg)
+
+      &_2
+      //transform: translateX(-20px) rotate(-19deg)
+
+      &_3
+      //transform: rotate(-15deg) translateX(-15px)
+
+      &_4
+    //transform: rotate(-20deg) translateX(-20px)
+
+    &_next
+      //transform: translateX(-8px) rotate(12deg)
+
+      &_2
+      //transform: translateX(-20px) rotate(19deg)
+
+      &_3
+        //transform: rotate(15deg) translateX(-15px)
+
+

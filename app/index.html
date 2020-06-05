@@ -31,7 +31,7 @@
 
 </head>
 
-<body>
+<body class="home">
 
 	<header class="custom-container page-header">
 		<div class="page-header__logo">
@@ -61,37 +61,49 @@
 		</div>
 	</div>
 
-	<main class="custom-container page-main">
+	<main class="custom-container home__main">
 		<h1 class="visually-hidden">Buy time app</h1>
-		<section class="date-overview">
-			<h2 class="custom-h2">Deleniti explicari democritum</h2>
-			<p class="custom-p">no, no debitis praullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
+		<section class="date-overview home__header-overview">
+			<h2 class="custom-h2 date-overview__title">Deleniti explicari democritum</h2>
+			<div class="custom-p">
+				<p>no, no debitis praullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
+				<p class="home__extended-p">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+			</div>
 		</section>
 
-		<div data-key="2011" class="js-date date-card">
-			<h2 class="js-date-title custom-h2 date-card__title">Deleniti explicari democritum nam no, no debitis praullamco laboris</h2>
-			<div class="js-date-output js-date-output-load date-card__date">2011</div>
-			<p class="js-date-descr date-card__descr">Te nam semper partiendo. Diam abhorreant ex vis, usu cu suas solum quodsi.</p>
-		</div>
+		<section class="date-widget">
+			<div data-key="2011" class="js-date date-widget__card">
+				<h2 class="js-date-title date-widget__title">Deleniti explicari democritum nam no, no debitis praullamco laboris</h2>
+				<div class="date-widget__date-wrap">
+					<div class="js-date-loader date-widget__loader"></div>
+					<div class="js-date-output date-widget__date">2011</div>
+				</div>
+				<p class="js-date-descr date-widget__descr">Te nam semper partiendo. Diam abhorreant ex vis, usu cu suas solum quodsi.</p>
+			</div>
 
-		<ul class="date-circle">
-<!--			todo вручную задать стили которые будут немного наклонять и смещать соседние элементы списка-->
-<!--			todo написать скрипт который будет делать то же самое-->
-			<li data-key="2020" class="js-date-key date-circle__item date-circle__item_prev_4">today</li>
-			<li data-key="2017" class="js-date-key date-circle__item date-circle__item_prev_3">2017</li>
-			<li data-key="2015" class="js-date-key date-circle__item date-circle__item_prev_2">2015</li>
-			<li data-key="2012" class="js-date-key date-circle__item date-circle__item_prev">2012</li>
-			<li data-key="2011" class="js-date-key date-circle__item date-circle__item_current">2011</li>
-			<li data-key="2007" class="js-date-key date-circle__item date-circle__item_next">2007</li>
-			<li data-key="2006" class="js-date-key date-circle__item date-circle__item_next_2">2006</li>
-			<li data-key="2004" class="js-date-key date-circle__item date-circle__item_next_3">2004</li>
-		</ul>
+			<ul class="date-widget__circle">
+				<!--todo вручную задать стили которые будут немного наклонять и смещать соседние элементы списка-->
+				<!--todo написать скрипт который будет делать то же самое-->
+				<li data-key="2020" class="js-date-key date-widget__key date-widget__key_prev_4">today</li>
+				<li data-key="2017" class="js-date-key date-widget__key date-widget__key_prev_3">2017</li>
+				<li data-key="2015" class="js-date-key date-widget__key date-widget__key_prev_2">2015</li>
+				<li data-key="2012" class="js-date-key date-widget__key date-widget__key_prev">2012</li>
+				<li data-key="2011" class="js-date-key date-widget__key date-widget__key_current">2011</li>
+				<li data-key="2007" class="js-date-key date-widget__key date-widget__key_next">2007</li>
+				<li data-key="2006" class="js-date-key date-widget__key date-widget__key_next_2">2006</li>
+				<li data-key="2004" class="js-date-key date-widget__key date-widget__key_next_3">2004</li>
+			</ul>
+		</section>
+
+		<section class="date-overview">
+			<h2 class="custom-h2">Praullamco laboris nisi ut aliquip</h2>
+			<div class="custom-p">
+				<p>Aulla pariatur. Excepteur.</p>
+				<p>sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+			</div>
+		</section>
 	</main>
-
-	<script>
-
-
-	</script>
 
 	<script src="js/scripts.min.js"></script>
 
